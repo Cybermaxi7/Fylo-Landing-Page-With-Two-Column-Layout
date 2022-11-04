@@ -1,0 +1,257 @@
+.intro {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 8rem;
+  margin: 10rem 0;
+  gap: 5rem;
+
+  @include for(tab-port) {
+    padding: 0 0 0 6rem;
+    gap: 3rem;
+  }
+
+  @include for(phone) {
+    flex-direction: column-reverse;
+    padding: 0 4rem;
+  }
+
+  &__left {
+    width: 50%;
+    @include for(phone) {
+      width: 100%;
+      text-align: center;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    @include for(phone) {
+      width: 100%;
+    }
+
+    img {
+      width: 90%;
+      object-fit: contain;
+    }
+  }
+}
+.bottomBg {
+  width: 100%;
+  img {
+    object-position: auto;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.about {
+  width: 100%;
+  padding-inline: 8rem;
+  display: flex;
+  padding-block: 6rem;
+  background-color: $color-grayBlue;
+  gap: 5rem;
+  @include for(tab-port) {
+    gap: 3rem;
+  }
+
+  @include for(phone) {
+    flex-direction: column-reverse;
+    padding-inline: 4rem;
+}
+
+  &__left {
+    width: 50%;
+    @include for(phone) {
+        width: 100%;
+        text-align: center;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+      @include for(tab-port) {
+        font-size: 2.8rem;
+      }
+    }
+    p {
+      font-size: 1.7rem;
+      margin-bottom: 1.5rem;
+
+      @include for(tab-port) {
+        font-size: 1.4rem;
+      }
+    }
+    a {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      text-decoration: none;
+      color: $color-moderateCyan;
+      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+      border-bottom: 1px solid $color-moderateCyan;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s ease-out;
+      @include for(tab-port) {
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        color: hsl(170, 47%, 56%);
+        border-bottom: 1px solid hsl(170, 47%, 56%);
+        padding-bottom: 0;
+      }
+      img {
+        color: #fff;
+        background-color: $color-moderateCyan;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &__testimonial {
+    margin-top: 6rem;
+    width: 35rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+      rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    @include for(phone) {
+    width: 100%;
+    }
+
+    img {
+      width: 2rem;
+      color: $color-darkBlue;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    & > div {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+
+      img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
+    }
+    &-info {
+      p:first-child {
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+      p:last-child {
+        font-family: "Raleway", sans-serif;
+        margin-bottom: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__right {
+    width: 50%;
+    @include for(phone) {
+        width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.sign-up {
+  width: 100%;
+  display: flex;
+  padding-block: 10rem;
+  padding-inline: 8rem;
+  background-color: $color-saturatedBlue;
+  gap: 5rem;
+  @include for(phone) {
+    flex-direction: column;   
+    text-align: center;
+    padding-inline: 4rem;
+}
+
+  &__left {
+    width: 50%;
+    @include for(phone) {
+        width: 100%;
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      color: #fff;
+      opacity: 0.6;
+      font-size: 1.4rem;
+      width: 45rem;
+      @include for(tab-land) {
+        width: 35rem;
+    }
+    @include for(tab-port) {
+        width: 27rem;
+    }
+    @include for(phone) {
+        width: 100%;
+    }
+    }
+  }
+
+  &__right {
+    width: 50%;
+    @include for(phone) {
+        width: 100%;
+    }
+
+    .form {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+
+      input[type="email"] {
+        width: 80%;
+
+        @include for(tab-port) {
+            width: 100%;
+        }
+      }
+      input[type="submit"] {
+        width: 30%;
+        @include for(tab-land) {
+            width: 60%;
+        }
+        @include for(tab-port) {
+            width: 100%;
+        }
+      }
+
+    }
+  }
+}

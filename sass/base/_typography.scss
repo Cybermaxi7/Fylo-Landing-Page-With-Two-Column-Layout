@@ -1,0 +1,23 @@
+h1, h2, h3, a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+.heading-primary {
+    font-weight: 700;
+    font-size: 4rem;
+    color: $color-darkBlue;
+    line-height: 1.4;
+
+    @include for(tab-port) {
+    font-size: 3rem;
+    }
+}
+
+.paragraph {
+    color: $color-darkBlue;
+    font-weight: 400;
+    font-size:  1.9rem;
+    @include for(tab-port) {
+        font-size: 1.6rem;
+    }
+}
